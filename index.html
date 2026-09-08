@@ -564,7 +564,7 @@
                     <text class="route-label" x="400" y="150">D5 宿1晚</text>
                 </g>
             </svg>
-            <p style="font-size: 12px; color: #666; margin-top: 10px; text-align: center;">💡 点击城市名可打开Google地图导航</p>
+            <p style="font-size: 12px; color: #666; margin-top: 10px; text-align: center;">💡 点击城市名可打开高德地图导航</p>
         </div>
 
         <div class="divider"></div>
@@ -813,7 +813,7 @@
                         <div class="expandable">
                             <h4>路线概览</h4>
                             <p style="font-size: 14px; line-height: 1.8;">
-                                <strong>铜鼓荡村出发</strong> → 原始森林 → <strong>牛倒岩</strong>（打卡点，远眺喀斯特峰林） → <strong>万峰顶</strong>（制高点，360°俯瞰） → 下撤
+                                <strong>铜鼓荡村出发</strong> → 原始森林 → <strong>牛倒岩</strong>（打卡点，远眺喀斯特峰林） → <strong>万峰顶</strong>（制高点，360°景观）
                             </p>
 
                             <h4 style="margin-top: 15px;">徒步前检查清单</h4>
@@ -910,7 +910,7 @@
 
             <h3 style="margin-top: 15px; margin-bottom: 10px; color: var(--secondary); font-size: 15px;">💳 出行建议</h3>
             <ul style="font-size: 14px; line-height: 1.8;">
-                <li>✓ 提前下载离线地图（Google Maps + 高德地图）</li>
+                <li>✓ 提前下载离线地图（高德地图 + 百度地图）</li>
                 <li>✓ 确认手机信号运营商（贵州山区信号可能弱）</li>
                 <li>✓ 户外活动前查天气预报，灵活调整行程</li>
                 <li>✓ 2人出行，告知家人行程和联系方式</li>
@@ -992,10 +992,10 @@
                 : btn.textContent.replace('↑', '↓');
         }
 
-        // Google地图导航
+        // 高德地图导航
         function navigateTo(name, lat, lng) {
-            const googleMapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(name)}/@${lat},${lng},15z`;
-            window.open(googleMapsUrl, '_blank');
+            const aMapUrl = `https://amap.com/search?query=${encodeURIComponent(name)}&city=all&geoObj=|${lng}|${lat}`;
+            window.open(aMapUrl, '_blank');
         }
 
         // 初始化主题
